@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Draggable Todo App</title>
+  </head>
+  <body>
+
+   <h1>Kanban Board</h1>
+    <!-- modal -->
+    <div class="modal" id="todo_form">
+      <div class="header">
+        <div class="title">Add Todo</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        <input type="text" id="todo_input" />
+        <input type="submit" value="Add Todo" id="todo_submit" />
+      </div>
+    </div>
+    <!-- todo -->
+    <div class="todo-container">
+      <div class="status" id="no_status">
+        <h2>ToDo</h2>
+        <button id="add_btn" data-target-modal="#todo_form">+Add</button>
+        <div class="todo" draggable="true">
+          <p class="todo-id" id="todo-id">#01</p>
+           <button class="edit-btn" id="edit">Edit Task</button>
+         
+           <h3 class="title" id="title"> Buy a Pizza</h3>
+           <p class="desc" id="desc">Lorem illum, sap placeat sequi veniam. Consequuntur, nihil!</p>
+           <p class="date" id="date">Last Date : <span>20-12-2022</span></p>
+            By Abc Xyz
+          <span class="close">&times;</span>
+        </div>
+      </div>
+      <div class="status">
+        <h2>Backlogs</h2>
+      </div>
+      <div class="status">
+        <h2>In Progress</h2>
+      </div>
+      <div class="status">
+        <h2>In Testing</h2>
+      </div>
+      <div class="status">
+        <h2>Done</h2>
+      </div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
